@@ -1,3 +1,3 @@
-require "noobs"
+require './noobs'
 
  run Sinatra::Application
