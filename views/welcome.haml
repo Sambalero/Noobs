@@ -11,3 +11,11 @@
 %p Rather than look for such a site, I decided to create one. In fact, why not create a site that would bring people together, and that might possibly lead to an organization of people dedicated to providing "newbies" with an opportunity to practice the craft that they are learning?
 %h4 The next deployment will feature:
 %ul a form for getting public commentary.
+%h4 Send me a note!
+%p (If it seems appropriate I'll either respond or post it on the commentary page. None of the fields are required.)
+
+%form{ :action => "/", :method => "post" }
+  %label{:for => "name"} Name:
+  %input{:name => "name", :type => "text", :value => "Anonymous"}/
+  %input{ :type => "submit" }
+
