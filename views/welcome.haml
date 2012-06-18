@@ -12,10 +12,20 @@
 %h4 The next deployment will feature:
 %ul a form for getting public commentary.
 %h4 Send me a note!
+%br
 %p (If it seems appropriate I'll either respond or post it on the commentary page. None of the fields are required.)
 
 %form{ :action => "/", :method => "post" }
-  %label{:for => "name"} Name:
-  %input{:name => "name", :type => "text", :value => "Anonymous"}/
-  %input{ :type => "submit" }
+  %fieldset
+    %ol
+      %li
+        %label{:for => "name"} Name:
+        %input{:name => "contact", :cols => "40", :type => "text", :value => ""}
+      %li
+        %label{:for => "contact"} Contact:
+        %input{:name => "contact", :type => "text", :value => ""}
+      %li
+        %label{:for => "comment"} Comment:
+        %textarea{:name => "comment", :rows => "10", :cols => "70"}
+    %input{:type => "submit"}
 
