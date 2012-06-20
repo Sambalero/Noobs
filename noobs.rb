@@ -39,6 +39,6 @@ post '/' do
         :password => ENV["SENDGRID_PASSWORD"],
         :authentication => :plain,
         :enable_starttls_auto => true
-      }).deliver
+      })
     haml :thankYou     
 end  
