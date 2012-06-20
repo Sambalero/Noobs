@@ -25,7 +25,7 @@ end
 post '/' do   
 
     Pony.mail(
-      :from => params[:name]s,
+      :from => params[:name],
       :to => 'kevinswallow2@hotmail.com',
       :subject => params[:contact],
       :body => params[:comment],
