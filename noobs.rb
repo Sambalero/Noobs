@@ -1,6 +1,7 @@
-require 'rubygems'
+require 'pony'
 require 'sinatra'
 require 'haml'
+require "bundler/setup"
 require "sinatra/reloader" if development?  
 
 
@@ -21,12 +22,12 @@ get '/*' do
   haml :not_found
 end
 
-post '/' do
-  require 'pony'
+post '/' do   
+
     Pony.mail(
-      :from => params[:name] + "<" + params[:contact] + ">",
+      :from => params[:name],
       :to => 'kevinswallow2@hotmail.com',
-      :subject => "NOOBS comment",
+      :subject => params[:contact],
       :body => params[:comment],
       :port => '587',
       :via => :smtp,
@@ -39,5 +40,5 @@ post '/' do
         :authentication => :plain,
         :enable_starttls_auto => true
       })
-    haml :thankYou
-end    
+    haml :thankYou     
+end  
