@@ -39,6 +39,6 @@ post '/' do
         :password => '2tc2jutb',
         :authentication => :plain,
         :enable_starttls_auto => true
-      })
+      }).deliver
     haml :thankYou     
 end  
