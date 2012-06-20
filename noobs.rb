@@ -35,8 +35,8 @@ post '/' do
         :address => 'smtp.sendgrid.net',
         :port => '587',
         :domain => 'heroku.com',
-        :user_name => 'app5287164@heroku.com',
-        :password => '2tc2jutb',
+        :user_name => ENV["SENDGRID_USERNAME"],
+        :password => ENV["SENDGRID_PASSWORD"],
         :authentication => :plain,
         :enable_starttls_auto => true
       }).deliver
