@@ -1,25 +1,24 @@
 require 'pony'
 require 'sinatra'
-require 'haml'
 require "bundler/setup"
 require "sinatra/reloader" if development?  
 
 
 
 get '/' do
-  haml :welcome
+  erb :welcome
 end
 
 get '/commentary' do
-  haml :commentary
+  erb :commentary
 end
 
 get '/page2' do
-  haml :page2
+  erb :page2
 end
 
 get '/*' do
-  haml :not_found
+  erb :not_found
 end
 
 post '/' do   
@@ -40,5 +39,5 @@ post '/' do
         :authentication => :plain,
         :enable_starttls_auto => true
       })
-    haml :thankYou     
+    erb :thankYou     
 end  
