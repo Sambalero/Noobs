@@ -3,8 +3,6 @@ require 'sinatra'
 require "bundler/setup"
 require "sinatra/reloader" if development?  
 
-
-
 get '/' do
   erb :welcome
 end
@@ -24,10 +22,10 @@ end
 post '/' do   
 
     Pony.mail(
-      :from => params[:name],
-      :to => 'kevinswallow2@hotmail.com',
-      :subject => params[:contact],
-      :body => params[:comment],
+      :from => "Noobs",
+      :to => 'kpswallow2@gmail.com',
+      :subject => ,
+      :body => "comment: " + params[:comment] +"\n from: " + params[:contact]
       :port => '587',
       :via => :smtp,
       :via_options => {
