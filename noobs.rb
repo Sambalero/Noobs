@@ -24,7 +24,7 @@ post '/' do
     Pony.mail(
       :from => "Noobs",
       :to => 'kpswallow2@gmail.com',
-      :subject => ,
+      :subject => params[:name],
       :body => "comment: " + params[:comment] +"\n from: " + params[:contact],
       :port => '587',
       :via => :smtp,
