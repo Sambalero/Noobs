@@ -25,7 +25,7 @@ post '/' do
       :from => "Noobs",
       :to => 'kpswallow2@gmail.com',
       :subject => ,
-      :body => "comment: " + params[:comment] +"\n from: " + params[:contact]
+      :body => "comment: " + params[:comment] +"\n from: " + params[:contact],
       :port => '587',
       :via => :smtp,
       :via_options => {
