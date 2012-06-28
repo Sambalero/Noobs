@@ -19,10 +19,21 @@ header h1 a:link, header h1 a:visited {
 }
 
 header h2 {
-	font-size: 16px;
+	font-size: 24px;
 	font-style: italic;
-	color: #999;
+	color: #444;
 }
+
+dl{
+  dt {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  dd {
+    margin: 0;
+    padding: 0 0 0.5em 0;
+  }
+} 
 
 #main {
 	margin: 0 0 20px;
@@ -115,3 +126,36 @@ p {
 	float: right;
 	margin: 0 0 10px 10px;
 }
+
+#ddtoptabs{
+margin-left: 4px; /*Opera 8 fix -1px*/
+padding: 0;
+width: 450px;
+height: 27px;
+background: transparent;
+padding-left: 5px;
+}
+
+#ddtoptabs ul{
+font: normal 10px verdana, arial, sans-serif;
+margin:0;
+padding:0;
+list-style:none;
+}
+
+#ddtoptabs li{
+display:inline;
+margin:0 2px 0 0;
+padding:0;
+text-transform:uppercase;
+line-height: 1.3em;
+font-size: 120%;
+}  
+
+#toprightdiv{
+width: 300px;
+margin-right: 2px;
+margin-bottom: 0;
+float: right;
+text-align: right;
+
