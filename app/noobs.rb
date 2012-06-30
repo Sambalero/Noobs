@@ -27,9 +27,9 @@ get '/page2' do
   erb :page2
 end
 
-
-
-
+get '/admin' do
+  erb :admin
+end
 
 get '/*' do
   erb :not_found
