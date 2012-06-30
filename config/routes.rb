@@ -1,18 +1,3 @@
-require 'pony'
-require 'sinatra'
-require "bundler/setup"
-require "sinatra/reloader" if development?  
-require 'active_record'
-require 'sinatra/activerecord'  #necessary?
-
-require './db/models'  #necessary?
-
-
-ActiveRecord::Base.establish_connection(
-  :adapter => 'sqlite3', 
-  :database => 'db/development.db'
-)
-
 get '/' do
   erb :welcome
 end
