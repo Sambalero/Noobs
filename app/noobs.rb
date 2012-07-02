@@ -10,7 +10,6 @@ require './db/models'  #necessary?
 __DIR__ = ::File.dirname(__FILE__)
 require __DIR__ + '/controllers/init'
 
-require 'activerecord'
 require 'uri'
 
 db = URI.parse(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
