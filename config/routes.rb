@@ -1,8 +1,3 @@
-require 'pony'
-require 'sinatra'
-require "bundler/setup"
-require "sinatra/reloader" if development?  
-
 get '/' do
   erb :welcome
 end
@@ -13,6 +8,16 @@ end
 
 get '/page2' do
   erb :page2
+end
+
+get '/users' do
+  @users = User.all
+  erb :users
+end
+
+get '/users/:id' do
+  @user = User.find(params[:id])
+  erb :show
 end
 
 get '/*' do

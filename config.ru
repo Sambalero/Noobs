@@ -1,4 +1,4 @@
-require './noobs'
+require './app/noobs'
 
 ENV['RACK_ENV'] = 'development'
 
