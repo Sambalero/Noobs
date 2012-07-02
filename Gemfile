@@ -4,12 +4,18 @@ gem 'thin'
 gem 'pony'
 gem 'activerecord'
 gem 'rake'
-gem 'sqlite3'
 gem 'sinatra-activerecord'
 
 
 group :development do
   gem 'sinatra-reloader', require: 'sinatra/reloader'
-  gem 'taps'
-  gem 'rvm'
-end     
+  gem 'sqlite3'
+end   
+
+group :test do
+  gem 'sqlite3'
+end 
+
+group :production do
+  gem 'pg'
+end  
