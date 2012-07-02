@@ -10,4 +10,6 @@ gem 'sinatra-activerecord'
 
 group :development do
   gem 'sinatra-reloader', require: 'sinatra/reloader'
+  gem 'taps'
+  gem 'rvm'
 end     
