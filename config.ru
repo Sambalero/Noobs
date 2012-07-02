@@ -1,5 +1,5 @@
 require './app/noobs'
 
-ENV['RACK_ENV'] = 'development'
+# ENV['RACK_ENV'] = 'development'
 
 run Sinatra::Application
