@@ -24,10 +24,10 @@ ActiveRecord::Base.establish_connection(
   :encoding => 'utf8'
 )
 
-ActiveRecord::Base.establish_connection(
-  :adapter => 'sqlite3', 
-  :database => 'db/development.db'
-)
+# ActiveRecord::Base.establish_connection(
+#   :adapter => 'sqlite3', 
+#   :database => 'db/development.db'
+# )
 
 get '/' do
   erb :welcome
