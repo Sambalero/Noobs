@@ -1,3 +1,3 @@
 require 'sinatra/activerecord/rake'
-require './noobs'
+require './app/noobs'
 
