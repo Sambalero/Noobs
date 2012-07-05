@@ -14,7 +14,7 @@ require __DIR__ + '/controllers/init'
 require 'uri'
 
 
-set :database, 'postgres://Kevin:@localhost/noobs'
+# set :database, 'postgres://Kevin:@localhost/noobs'
 
 db = URI.parse(ENV['DATABASE_URL'] || 'postgres://Kevin:@localhost/noobs')
 ActiveRecord::Base.establish_connection(
